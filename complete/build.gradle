@@ -40,7 +40,6 @@ buildscript {
 plugins {
     id "war"
     id "idea"
-    id "org.ysb33r.webdriver-binaries" version "4.0.0"
     id "eclipse"
 }
 
@@ -133,11 +132,6 @@ compileJava.options.release = 21
 
 tasks.withType(Test).configureEach {
     useJUnitPlatform()
-}
-webdriverBinaries {
-    chromedriver '122.0.6260.0'
-    geckodriver '0.33.0'
-    edgedriver '110.0.1587.57'
 }
 
 assets {

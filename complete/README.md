@@ -25,12 +25,6 @@
 
 - [Grails Asset Pipeline documentation](https://github.com/wondrify/asset-pipeline#readme)
 
-## Feature geb-with-webdriver-binaries documentation
-
-- [Grails Geb Functional Testing using WebDriver binaries Gradle plugin documentation](https://github.com/apache/grails-geb#readme)
-
-- [https://groovy.apache.org/geb/manual/current/](https://groovy.apache.org/geb/manual/current/)
-
 ## Feature geb-with-testcontainers documentation
 
 - [Grails Geb Functional Testing for Grails with Testcontainers documentation](https://github.com/apache/grails-geb#readme)
