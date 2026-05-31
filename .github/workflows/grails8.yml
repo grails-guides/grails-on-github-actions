@@ -16,8 +16,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        app: [ initial, complete ]
-    name: ${{ matrix.app }} (test + integrationTest)
+        include:
+          - app: initial
+            tasks: test integrationTest
+          - app: complete
+            tasks: test integrationTest functionalTest
+    name: ${{ matrix.app }} (${{ matrix.tasks }})
     steps:
       - uses: actions/checkout@v4
 
@@ -34,7 +38,7 @@ jobs:
         working-directory: ${{ matrix.app }}
         run: |
           chmod +x gradlew
-          ./gradlew test integrationTest --console=plain --stacktrace
+          ./gradlew ${{ matrix.tasks }} --console=plain --stacktrace
 
       - name: Upload test reports
         if: always()
